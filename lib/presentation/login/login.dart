@@ -2,7 +2,9 @@ import 'package:care_tutors_assignment/core/utils/text_font_style.dart';
 import 'package:care_tutors_assignment/presentation/widgets/action_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../core/routes/app_routes_const.dart';
 import '../widgets/custom_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -25,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 16.sp, vertical: 20),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
         children: [
           SizedBox(height: 150.h),
           Center(
@@ -63,6 +65,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(width: 6.w),
               InkWell(
+                onTap: () {
+                  context.pushNamed(AppRoutesConst.register);
+                },
                 child: Text(
                   "Sign Up",
                   style: TextFontStyle.headline14PoppinsBlack,

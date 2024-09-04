@@ -4,6 +4,8 @@ import 'package:care_tutors_assignment/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../presentation/registration/registration.dart';
+
 class AppRoutes {
   AppRoutes._();
 
@@ -18,7 +20,12 @@ class AppRoutes {
           name: AppRoutesConst.login,
           path: '/login',
           pageBuilder: (context, state) =>
-              const MaterialPage(child: LoginScreen()))
+              const MaterialPage(child: LoginScreen())),
+      GoRoute(
+          name: AppRoutesConst.register,
+          path: '/register',
+          pageBuilder: (context, state) =>
+              const MaterialPage(child: RegistrationScreen()))
     ],
   );
 }

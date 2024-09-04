@@ -27,7 +27,7 @@ class TextFontStyle {
       fontWeight: FontWeight.w400);
 
   static final headline14PoppinsRegular = GoogleFonts.poppins(
-      color: const Color(0xFFcce1f9),
+      color: const Color(0xFF80b4f0),
       fontSize: 14.sp,
       fontWeight: FontWeight.w400);
 }
